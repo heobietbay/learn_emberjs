@@ -1,0 +1,32 @@
+
+{{#link-to 'register.modify' model}}
+	 {{fullName}}
+{{/link-to}}
+
+<a {{ action 'toggleIsShown'}} style='margin-left:8px'>View</a>
+
+{{#if isShown }}
+	<div class="row">
+		<div class="col-md-12" style="padding-top:8px;">
+			<label class="col-md-1">First name:</label>
+			<span>{{model.firstName}}</span>
+		</div>
+		<div class="col-md-12" style="padding-top:8px;">
+			<label class="col-md-1">Last name:</label>
+			<span>{{model.lastName}}</span>
+		</div>
+		<div class="col-md-12" style="padding-top:8px;">
+			<label class="col-md-1">Email:</label>
+			<span>{{model.email}}</span>
+		</div>
+		<div class="col-md-12" style="padding-top:8px;">
+			<label class="col-md-1">Address:</label>
+			<span>{{model.address}}</span>
+		</div>
+
+		<div class="col-md-12" style="padding-top:8px;">
+			<label class="col-md-1">Date of birth:</label>
+			<span>{{model.dob}}</span>
+		</div>
+	</div>
+{{/if}}
