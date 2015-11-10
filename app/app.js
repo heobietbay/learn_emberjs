@@ -12,38 +12,10 @@ App = Ember.Application.extend({
     podModulePrefix: config.podModulePrefix,
     Resolver: Resolver
 });
-/*
-App.initializer({
-    name: 'Inject Store',
-    after: "store", // need this to make sure the store is already created
-    initialize: function(container, application) {
-     var store = instance.container.lookup('store:main');
-        console.log('the store is: ', store);
-
-        store.push('user', {
-                id: 1,
-                firstName: 'Khoa',
-                lastName: 'Tran',
-                dob: null,
-                address: 'abc',
-                email: 'khoa.tran@email.com'
-            });    
-    }
-});*/
 
 App.instanceInitializer({
     name: "SetupData",
     initialize: function(instance) {
-
-        /* store.push('user', {
-             id: 1,
-             firstName: 'Khoa',
-             lastName: 'Tran',
-             dob: null,
-             address: 'abc',
-             email: 'khoa.tran@email.com'
-         });*/
-
         Ember.$.getJSON('../config_data/users.json').then(function(arr) {
 
             var store = instance.container.lookup('service:store');

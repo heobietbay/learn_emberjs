@@ -1,48 +1,13 @@
 <h3> Welcome to registration page</h3>
 
-<div style="margin-top:40px">
-	<!-- <h4> Your infomarion </h4>
-	
-	<p> Name: {{model.fullName}}</p>
-	<p> Birth day: {{model.dob}} </p>
-	<p> Email: {{model.email}} </p>
-	<p> Address: {{model.address}} </p> -->
-	
+<div style="margin-top:40px">	
 	<h3> Current users </h3>
 		<ul>
 		{{#each model as |u| }}
-		<li>
-			<!-- {{#link-to 'register.edit' u}}
-			  {{unbound u.fullName}}
-			{{/link-to}} -->
-
+		<li>			
 			<!-- This demonstate passing a whole modle and primitive attribute -->
 	     {{user-detail firstName=u.firstName lastName=u.lastName email=u.email address=u.address dob=u.dob model=u}}
 		</li>
 		{{/each}}
-		</ul>
-	<!-- <p>
-		<div>
-		{{#if editMode}}
-		   <button class='btn btn-default' {{action 'revertChange'}}>
-		     Cancel
-		   </button>
-			{{else}}
-			<button class='btn btn-primary' {{action 'edit'}}>
-		     Edit
-		   </button>
-			{{/if}}
-		</div>		
-	</p>
-	
-		{{#if editMode}}
-			<div style='margin-top: 20px'>
-				{{outlet}}
-			</div>
-		{{/if}} -->
-
-		<!-- <div style='margin-top: 20px'>
-			 {{outlet}} 
-		</div> -->
-
+		</ul>	
 </div>
