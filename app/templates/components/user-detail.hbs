@@ -3,30 +3,53 @@
 	 {{fullName}}
 {{/link-to}}
 
-<a {{ action 'toggleIsShown'}} style='margin-left:8px'>View</a>
+<a {{ action 'toggleIsView'}} style='margin-left:8px'>View</a>
+<a {{ action 'toggleEdit'}} style='margin-left:8px'>Edit</a>
 
-{{#if isShown }}
+{{#if shouldShow }}
 	<div class="row">
 		<div class="col-md-12" style="padding-top:8px;">
 			<label class="col-md-1">First name:</label>
-			<span>{{model.firstName}}</span>
+			{{#if isView}}
+			   <span>{{model.firstName}}</span>
+			{{/if}}
+			{{#if isEdit}}
+			   {{input type='text' value=model.firstName}}
+			{{/if}}
 		</div>
 		<div class="col-md-12" style="padding-top:8px;">
 			<label class="col-md-1">Last name:</label>
-			<span>{{model.lastName}}</span>
+			{{#if isView}}
+			  <span>{{model.lastName}}</span>
+			{{/if}}
+			{{#if isEdit}}
+			   {{input type='text' value=model.lastName}}
+			{{/if}}
 		</div>
 		<div class="col-md-12" style="padding-top:8px;">
 			<label class="col-md-1">Email:</label>
-			<span>{{model.email}}</span>
+			{{#if isView}}
+			   <span>{{model.email}}</span>
+			{{/if}}
+			{{#if isEdit}}
+			   {{input type='text' value=model.email}}
+			{{/if}}
 		</div>
 		<div class="col-md-12" style="padding-top:8px;">
 			<label class="col-md-1">Address:</label>
-			<span>{{model.address}}</span>
+			{{#if isView}}
+			   <span>{{model.address}}</span>
+			{{/if}}
+			{{#if isEdit}}
+			   {{input type='text' value=model.address}}
+			{{/if}}
 		</div>
 
 		<div class="col-md-12" style="padding-top:8px;">
 			<label class="col-md-1">Date of birth:</label>
-			<span>{{model.dob}}</span>
+			{{#if isView}}
+			   <span>{{model.dob}}</span>
+			{{/if}}
 		</div>
 	</div>
 {{/if}}
