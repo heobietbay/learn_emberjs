@@ -51,5 +51,10 @@
 			   <span>{{model.dob}}</span>
 			{{/if}}
 		</div>
+		
+		<div class="col-md-12">
+			<button class="btn btn-primary" {{action 'save'}}>Save</button>
+			<button class="btn btn-default" style="margin-left:8px" {{action 'cancel'}}>Cancel</button>
+	    </div>
 	</div>
 {{/if}}
