@@ -24,8 +24,11 @@ export default Ember.Component.extend({
                 this.cancel();
             }
         },
-        save: function () {
-            this.sendAction('action',this.get('model'));
+        saveFromComponent: function () {
+            this.sendAction('saveFromComponent',this.get('model'));
+        },
+        cancelFromComponent: function () {
+            this.sendAction('cancelFromComponent',this.get('model'));
         }
     },
     urlToTransit: null

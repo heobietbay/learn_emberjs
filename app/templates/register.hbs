@@ -9,7 +9,8 @@
 	     {{user-detail 
 		  firstName=u.firstName lastName=u.lastName email=u.email address=u.address dob=u.dob
 		  model=u 
-		  action='save'
+		  saveFromComponent='saveByController'
+		  cancelFromComponent='cancelByController'
 		  urlToTransit='/'}}
 		</li>
 		{{/each}}

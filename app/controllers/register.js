@@ -6,7 +6,7 @@ export default Ember.Controller.extend({
         edit: function () {
             this.set('editMode', !this.get('editMode'));
         },
-        save: function (modelToSave) {
+        saveByController: function (modelToSave) {
             modelToSave.save()
                 .then(function () {
                 })
@@ -14,8 +14,8 @@ export default Ember.Controller.extend({
                     console.log(err);
                 });
         },
-        cancel: function () {
-            this.cancel();
+        cancelByController: function (theModel) {
+            theModel.rollbackAttributes();
         }
     }
 });
