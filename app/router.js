@@ -6,20 +6,21 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-    this.route('about');
-    this.route('list');
-    this.route('register', {
-        path: '/register'
-    }, function() {
-        this.route('edit', {
-            path: '/edit/:id'
-        });
-    });
+  this.route('about');
+  this.route('list');
+  this.route('register', {
+      path: '/register'
+  }, function() {
+      this.route('edit', {
+          path: '/edit/:id'
+      });
+  });
 
-    // specify like this, this will not be a master - detail template. this is a separate view
-    this.route('register.modify', {
-        path: '/register/modify/:id'
-    });
+  // specify like this, this will not be a master - detail template. this is a separate view
+  this.route('register.modify', {
+      path: '/register/modify/:id'
+  });
+  this.route('ebook');
 });
 
 export default Router;
