@@ -1,6 +1,6 @@
 import Ember from 'ember';
 /*import User  from '../pojos/user'*/
-import User from '../models/user'
+import User from '../models/user';
 
 export default Ember.Route.extend({
     /*init: function() {
@@ -25,7 +25,7 @@ export default Ember.Route.extend({
             }).then(function() {
                 return route.store.peekRecord('user', 1);
             });*/
-	
+
         return this.store.peekAll('user');
     },
     actions:{

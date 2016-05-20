@@ -1,28 +1,30 @@
-<div class="row">
-	<div class="col-md-12" style="padding-top:8px;">
-		<label class="col-md-1">First name:</label>
-		{{input type='text' value=model.firstName}}
-	</div>
-	<div class="col-md-12" style="padding-top:8px;">
-		<label class="col-md-1">Last name:</label>
-		{{input type='text' value=model.lastName}}
-	</div>
-	<div class="col-md-12" style="padding-top:8px;">
-		<label class="col-md-1">Email:</label>
-		{{input type='text' value=model.email}}
-	</div>
-	<div class="col-md-12" style="padding-top:8px;">
-		<label class="col-md-1">Address:</label>
-		{{ input type='text' value=model.address }}
-	</div>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12" style="padding-top:8px;">
+			<label class="col-md-1">First name:</label>
+			{{input type='text' value=model.firstName}}
+		</div>
+		<div class="col-md-12" style="padding-top:8px;">
+			<label class="col-md-1">Last name:</label>
+			{{input type='text' value=model.lastName}}
+		</div>
+		<div class="col-md-12" style="padding-top:8px;">
+			<label class="col-md-1">Email:</label>
+			{{input type='text' value=model.email}}
+		</div>
+		<div class="col-md-12" style="padding-top:8px;">
+			<label class="col-md-1">Address:</label>
+			{{ input type='text' value=model.address }}
+		</div>
 
-	<div class="col-md-12" style="padding-top:8px;">
-		<label class="col-md-1">Date of birth:</label>
-		{{input type='text' value=model.dob}}
-	</div>
+		<div class="col-md-12" style="padding-top:8px;">
+			<label class="col-md-1">Date of birth:</label>
+			{{input type='text' value=model.dob}}
+		</div>
 
-	<div class="col-md-12">
-		<button class="btn btn-primary" {{action 'save'}}>Save</button>
-		<button class="btn btn-default" style="margin-left:8px" {{action 'revertChange'}}>Cancel</button>
+		<div class="col-md-12">
+			<button class="btn btn-primary" {{action 'save'}}>Save</button>
+			<button class="btn btn-default" style="margin-left:8px" {{action 'revertChange'}}>Cancel</button>
+		</div>
 	</div>
 </div>

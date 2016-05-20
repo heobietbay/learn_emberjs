@@ -1,9 +1,13 @@
-<h3>Top ebooks about Ember</h3>
+<div class="container">
+	<h3>Top ebooks about Ember</h3>
 
-<ul>
-  {{#each model as |book| }}
-    <li>
-      {{book.Title}}
-    </li>
-  {{/each}}
-</ul>
+	<ul>
+		{{#each model as |book| }}
+			<li>
+				{{book.Title}}
+			</li>
+		{{/each}}
+	</ul>
+
+	{{outlet}}
+</div>

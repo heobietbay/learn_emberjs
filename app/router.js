@@ -20,7 +20,9 @@ Router.map(function() {
   this.route('register.modify', {
       path: '/register/modify/:id'
   });
-  this.route('ebook');
+  this.resource('ebook', function(){
+    this.route('new')
+  });
 });
 
 export default Router;

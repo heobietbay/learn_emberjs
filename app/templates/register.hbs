@@ -1,18 +1,15 @@
-<h3> Welcome to registration page</h3>
+<div class="container">
+	<h3> Welcome to registration page</h3>
 
-<div style="margin-top:40px">	
-	<h3> Current users </h3>
+	<div style="margin-top:40px">
+		<h3> Current users </h3>
 		<ul>
-		{{#each model as |u| }}
-		<li>			
-			<!-- This demonstate passing a whole modle and primitive attribute -->
-	     {{user-detail 
-		  firstName=u.firstName lastName=u.lastName email=u.email address=u.address dob=u.dob
-		  model=u 
-		  saveFromComponent='saveByController'
-		  cancelFromComponent='cancelByController'
-		  urlToTransit='/'}}
-		</li>
-		{{/each}}
-		</ul>	
+			{{#each model as |u| }}
+				<li>
+					<!-- This demonstate passing a whole modle and primitive attribute -->
+					{{user-detail firstName=u.firstName lastName=u.lastName email=u.email address=u.address dob=u.dob model=u saveFromComponent='saveByController' cancelFromComponent='cancelByController' urlToTransit='/'}}
+				</li>
+			{{/each}}
+		</ul>
+	</div>
 </div>
